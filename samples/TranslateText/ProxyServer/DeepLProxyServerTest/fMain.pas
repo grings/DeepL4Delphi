@@ -39,8 +39,8 @@
   https://github.com/DeveloppeurPascal/DeepL4Delphi
 
   ***************************************************************************
-  File last update : 2026-02-23T19:54:23.330+01:00
-  Signature : 09841598d48e341bcdb03f213ac99643dc18e26b
+  File last update : 2026-04-01T17:14:22.000+02:00
+  Signature : 5706e6da68ebb516eac0b667aa4ba75409442dec
   ***************************************************************************
 *)
 
@@ -100,15 +100,15 @@ begin
   end;
 
   if edtURLAPI.Text.IsEmpty then
-    DeepLSetAPIURL(CDeepLAPIURL_Free)
+    TDeepLAPI.Init(TDeepLAPI.ServerURLFree)
   else
-    DeepLSetAPIURL(edtURLAPI.Text);
+    TDeepLAPI.Init(edtURLAPI.Text);
 
   btnTestTranslateFREN.Visible := false;
   AniIndicator1.Visible := true;
   AniIndicator1.Enabled := true;
   try
-    DeepLTranslateTextASync('', 'FR', 'EN', edtTextFR.Text,
+    TDeepLAPI.TranslateTextASync('', 'FR', 'EN', edtTextFR.Text,
       procedure(OriginalText, TranslatedText, SourceLang, TargetLang: string)
       begin
         edtTextEN.Text := TranslatedText;
@@ -134,7 +134,7 @@ procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   edtURLAPI.Text := 'http://localhost:8080';
   edtTextFR.Text :=
-  'Test du serveur proxy de traduction français vers anglais (ou autres langues).';
+    'Test du serveur proxy de traduction français vers anglais (ou autres langues).';
 end;
 
 end.
