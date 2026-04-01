@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DeepLTranslateTextSync Method</title>
+  <title>TDeepLAPI.ServerURLFree Constant</title>
   <meta name="color-scheme" content="light dark" />
   <meta name="generator" content="DocInsight" />
   <meta name="toc-key" content="OlfSoftware.DeepL.ClientLib" />
   <meta name="search-index" content="toc&#x2f;search-index.js" />
-  <meta name="uid" content="OlfSoftware.DeepL.ClientLib.DeepLTranslateTextSync" />
+  <meta name="uid" content="OlfSoftware.DeepL.ClientLib.TDeepLAPI.ServerURLFree" />
   <link rel="stylesheet" href="static/css/learn.css" />
   <script src="static/js/index-learn.js"></script>
   <script src="toc/OlfSoftware.DeepL.ClientLib.js"></script>
@@ -77,6 +77,9 @@
             <li class="breadcrumbs-item">
               <a href="OlfSoftware.DeepL.ClientLib.html" class="cref">OlfSoftware.DeepL.ClientLib</a>
             </li>
+            <li class="breadcrumbs-item">
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.html" class="cref">TDeepLAPI</a>
+            </li>
           </ol>
         </nav>
 
@@ -85,7 +88,7 @@
       </div>
 
       <div class="content">
-        <h1>DeepLTranslateTextSync Method</h1>
+        <h1>TDeepLAPI.ServerURLFree Constant</h1>
 
         <nav id="center-doc-outline" class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm"
           aria-label="On this page">
@@ -95,9 +98,6 @@
           <ol id="content-well-in-this-article-list2" class="border-left padding-left-xxs">
             <li class="">
               <a href="#definition">Definition</a>
-            </li>
-            <li class="">
-              <a href="#remarks">Remarks</a>
             </li>
           </ol>
         </nav>
@@ -131,16 +131,6 @@
 </div>
 
 
-<div class="summaryHolder">
-  <div class="summary clearFix has-text-wrap">
-    <p>call DeepL API to translate the text from source_lang to target_lang
-(synchrone - current thread is freezed during process)
-
-</p>
-
-
-  </div>
-</div>
 
 
 <div class="code-block-header margin-top-sm">
@@ -153,89 +143,12 @@
 </div>
 
 <pre
-  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">function DeepLTranslateTextSync(auth_key: string; source_lang: string; target_lang: string; text: string; split_sentences: string = &#x27;1&#x27;; preserve_formatting: string = &#x27;0&#x27;; formality: string = &#x27;default&#x27;): string</code></pre>
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">const ServerURLFree = &#x27;https:&#x2f;&#x2f;api-free.deepl.com&#x27;</code></pre>
 
 
-<h4 class="propertyInfoTitle stack">Parameters</h4>
-<div class="propertyInfo">
-  <dl class="parameterList">
-    <dt>
-      auth_key
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      source_lang
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      target_lang
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      text
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      split_sentences
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      preserve_formatting
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      formality
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
 
-<h4 class="propertyInfoTitle stack">Returns</h4>
+
+<h4 class="propertyInfoTitle stack">Value</h4>
 <div class="propertyInfo">
   string
   
@@ -245,13 +158,6 @@
 
 
 
-
-
-
-<h2 id="remarks">Remarks</h2>
-<p>look at https:&#x2f;&#x2f;developers.deepl.com&#x2f;api-reference&#x2f;translate
-
-</p>
 
 
 
@@ -276,11 +182,6 @@
               class="border-left-md padding-left-xxs  border-color-primary">
               <a href="#definition"
                 class="font-weight-semibold color-text">Definition</a>
-            </li>
-            <li
-              class="border-left-md padding-left-xxs  border-color-transparent">
-              <a href="#remarks"
-                class="color-text-subtle">Remarks</a>
             </li>
           </ol>
         </nav>

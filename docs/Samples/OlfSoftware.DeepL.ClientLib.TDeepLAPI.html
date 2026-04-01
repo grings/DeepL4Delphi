@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OlfSoftware.DeepL.ClientLib Unit</title>
+  <title>TDeepLAPI Class</title>
   <meta name="color-scheme" content="light dark" />
   <meta name="generator" content="DocInsight" />
   <meta name="toc-key" content="OlfSoftware.DeepL.ClientLib" />
   <meta name="search-index" content="toc&#x2f;search-index.js" />
-  <meta name="uid" content="OlfSoftware.DeepL.ClientLib" />
+  <meta name="uid" content="OlfSoftware.DeepL.ClientLib.TDeepLAPI" />
   <link rel="stylesheet" href="static/css/learn.css" />
   <script src="static/js/index-learn.js"></script>
   <script src="toc/OlfSoftware.DeepL.ClientLib.js"></script>
@@ -74,6 +74,9 @@
             <li class="breadcrumbs-item">
               <a href="DeepLProxyServerUI.html" class="cref">DeepLProxyServerUI</a>
             </li>
+            <li class="breadcrumbs-item">
+              <a href="OlfSoftware.DeepL.ClientLib.html" class="cref">OlfSoftware.DeepL.ClientLib</a>
+            </li>
           </ol>
         </nav>
 
@@ -82,7 +85,7 @@
       </div>
 
       <div class="content">
-        <h1>OlfSoftware.DeepL.ClientLib Unit</h1>
+        <h1>TDeepLAPI Class</h1>
 
         <nav id="center-doc-outline" class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm"
           aria-label="On this page">
@@ -91,21 +94,31 @@
           </h2>
           <ol id="content-well-in-this-article-list2" class="border-left padding-left-xxs">
             <li class="">
-              <a href="#classes">Classes</a>
-            </li>
-            <li class="">
-              <a href="#delegates">Delegates</a>
+              <a href="#definition">Definition</a>
             </li>
             <li class="">
               <a href="#constants">Constants</a>
             </li>
             <li class="">
-              <a href="#routines">Routines</a>
+              <a href="#methods">Methods</a>
             </li>
           </ol>
         </nav>
-        
-<div class="metadata margin-top-md">
+        <h2 id="definition">Definition</h2>
+
+<div class="metadata">
+  <dl class="attributeList">
+    <dt>Unit:</dt>
+    <dd>
+      <span class="break-text">
+        <a href="OlfSoftware.DeepL.ClientLib.html" data-linktype="relative-path">OlfSoftware.DeepL.ClientLib
+
+</a>
+
+
+      </span>
+    </dd>
+  </dl>
   <dl class="attributeList">
     <dt>Package:</dt>
     <dd>
@@ -123,6 +136,17 @@
 
 
 
+<div class="code-block-header margin-top-sm">
+  <span class="code-block-header-language">Delphi</span>
+  <button type="button" class="button button-sm action inner-focus display-none-print">
+    <span class="icon copy has-text-subtle margin-right-xxs" aria-hidden="true">
+    </span>
+    <span>Copy</span>
+  </button>
+</div>
+
+<pre
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">type TDeepLAPI = class(TObject)</code></pre>
 
 
 
@@ -130,6 +154,17 @@
 
 
 
+<dl class="attributeList stack">
+  <dt>Inheritance</dt>
+  <dd>
+    <div class="pdlHolder">
+      <div class="pdl">
+        TObject
+      </div>
+      <span>TDeepLAPI</span>
+    </div>
+  </dd>
+</dl>
 
 
 
@@ -137,90 +172,6 @@
 
 
 
-<section class="member-group">
-  <h2 id="classes">Classes</h2>
-  <div class="has-inner-focus">
-    <table class="table table-sm margin-top-none">
-      <tbody>
-        <tr>
-          <td>
-            <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.html" class="cref">TDeepLAPI</a>
-            </span>
-          </td>
-          <td class="has-text-wrap">
-            
-          </td>
-          </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-<section class="member-group">
-  <h2 id="delegates">Delegates</h2>
-  <div class="has-inner-focus">
-    <table class="table table-sm margin-top-none">
-      <tbody>
-        <tr>
-          <td>
-            <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.TOnTextTranslatedErrorEvent.html" class="cref">TOnTextTranslatedErrorEvent</a>
-            </span>
-          </td>
-          <td class="has-text-wrap">
-            <p>Callback method&#x2f;event when translation has an error
-
-</p>
-
-
-          </td>
-          </tr>
-        <tr>
-          <td>
-            <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.TOnTextTranslatedErrorProc.html" class="cref">TOnTextTranslatedErrorProc</a>
-            </span>
-          </td>
-          <td class="has-text-wrap">
-            <p>Callback procedure when translation has an error
-
-</p>
-
-
-          </td>
-          </tr>
-        <tr>
-          <td>
-            <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.TOnTextTranslatedEvent.html" class="cref">TOnTextTranslatedEvent</a>
-            </span>
-          </td>
-          <td class="has-text-wrap">
-            <p>Callback method&#x2f;event when translation is ok
-
-</p>
-
-
-          </td>
-          </tr>
-        <tr>
-          <td>
-            <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.TOnTextTranslatedProc.html" class="cref">TOnTextTranslatedProc</a>
-            </span>
-          </td>
-          <td class="has-text-wrap">
-            <p>Callback procedure when translation is ok
-
-</p>
-
-
-          </td>
-          </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
 <section class="member-group">
   <h2 id="constants">Constants</h2>
   <div class="has-inner-focus">
@@ -229,7 +180,7 @@
         <tr>
           <td>
             <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.CDeepLAPIURL_Free.html" class="cref">CDeepLAPIURL_Free</a>
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.ServerURLFree.html" class="cref">ServerURLFree</a>
             </span>
           </td>
           <td class="has-text-wrap">
@@ -239,7 +190,7 @@
         <tr>
           <td>
             <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.CDeepLAPIURL_Pro.html" class="cref">CDeepLAPIURL_Pro</a>
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.ServerURLPro.html" class="cref">ServerURLPro</a>
             </span>
           </td>
           <td class="has-text-wrap">
@@ -251,19 +202,19 @@
   </div>
 </section>
 <section class="member-group">
-  <h2 id="routines">Routines</h2>
+  <h2 id="methods">Methods</h2>
   <div class="has-inner-focus">
     <table class="table table-sm margin-top-none">
       <tbody>
         <tr>
           <td>
             <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.DeepLSetAPIURL.html" class="cref">DeepLSetAPIURL(string)</a>
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.Init.html" class="cref">Init(string)</a>
             </span>
           </td>
           <td class="has-text-wrap">
-            <p>Call to initialize DeepL API URL.
-If you forget to do, you will be on Free API.
+            <p>Call to initialize DeepL API Server URL.
+By default the Free API Server is used.
 
 </p>
 
@@ -273,22 +224,7 @@ If you forget to do, you will be on Free API.
         <tr>
           <td>
             <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.DeepLTranslateTextASync.html#DeepLTranslateTextASync(string,string,string,string,TOnTextTranslatedEvent,TOnTextTranslatedErrorEvent,string,string,string)" class="cref">DeepLTranslateTextASync(string, string, string, string, TOnTextTranslatedEvent, TOnTextTranslatedErrorEvent, string, string, string)</a>
-            </span>
-          </td>
-          <td class="has-text-wrap">
-            <p>call DeepL API to translate the text from source_lang to target_lang
-(asynchrone - don&#x27;t freeze current thread)
-
-</p>
-
-
-          </td>
-          </tr>
-        <tr>
-          <td>
-            <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.DeepLTranslateTextASync.html#DeepLTranslateTextASync(string,string,string,string,TOnTextTranslatedProc,TOnTextTranslatedErrorProc,string,string,string)" class="cref">DeepLTranslateTextASync(string, string, string, string, TOnTextTranslatedProc, TOnTextTranslatedErrorProc, string, string, string)</a>
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextASync.html#TranslateTextASync(string,string,string,TOnTextTranslatedEvent,TOnTextTranslatedErrorEvent,TJSONObject,boolean)" class="cref">TranslateTextASync(string, string, string, TOnTextTranslatedEvent, TOnTextTranslatedErrorEvent, TJSONObject, Boolean)</a>
             </span>
           </td>
           <td class="has-text-wrap">
@@ -303,7 +239,52 @@ If you forget to do, you will be on Free API.
         <tr>
           <td>
             <span class="break-text">
-              <a href="OlfSoftware.DeepL.ClientLib.DeepLTranslateTextSync.html" class="cref">DeepLTranslateTextSync(string, string, string, string, string, string, string)</a>
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextASync.html#TranslateTextASync(string,string,string,TOnTextTranslatedProc,TOnTextTranslatedErrorProc,TJSONObject,boolean)" class="cref">TranslateTextASync(string, string, string, TOnTextTranslatedProc, TOnTextTranslatedErrorProc, TJSONObject, Boolean)</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            <p>call DeepL API to translate the text from source_lang to target_lang
+(asynchrone - don&#x27;t freeze current thread)
+
+</p>
+
+
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextASync.html#TranslateTextASync(string,string,string,string,TOnTextTranslatedEvent,TOnTextTranslatedErrorEvent,TJSONObject,boolean)" class="cref">TranslateTextASync(string, string, string, string, TOnTextTranslatedEvent, TOnTextTranslatedErrorEvent, TJSONObject, Boolean)</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextASync.html#TranslateTextASync(string,string,string,string,TOnTextTranslatedProc,TOnTextTranslatedErrorProc,TJSONObject,boolean)" class="cref">TranslateTextASync(string, string, string, string, TOnTextTranslatedProc, TOnTextTranslatedErrorProc, TJSONObject, Boolean)</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextSync.html#TranslateTextSync(string,string,string,TJSONObject,boolean)" class="cref">TranslateTextSync(string, string, string, TJSONObject, Boolean)</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextSync.html#TranslateTextSync(string,string,string,TJSONObject,boolean,string)" class="cref">TranslateTextSync(string, string, string, TJSONObject, Boolean, string)</a>
             </span>
           </td>
           <td class="has-text-wrap">
@@ -313,6 +294,16 @@ If you forget to do, you will be on Free API.
 </p>
 
 
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextSync.html#TranslateTextSync(string,string,string,string,TJSONObject,boolean)" class="cref">TranslateTextSync(string, string, string, string, TJSONObject, Boolean)</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
           </td>
           </tr>
       </tbody>
@@ -336,13 +327,8 @@ If you forget to do, you will be on Free API.
           <ol id="right-rail-on-this-page-list">
             <li
               class="border-left-md padding-left-xxs  border-color-primary">
-              <a href="#classes"
-                class="font-weight-semibold color-text">Classes</a>
-            </li>
-            <li
-              class="border-left-md padding-left-xxs  border-color-transparent">
-              <a href="#delegates"
-                class="color-text-subtle">Delegates</a>
+              <a href="#definition"
+                class="font-weight-semibold color-text">Definition</a>
             </li>
             <li
               class="border-left-md padding-left-xxs  border-color-transparent">
@@ -351,8 +337,8 @@ If you forget to do, you will be on Free API.
             </li>
             <li
               class="border-left-md padding-left-xxs  border-color-transparent">
-              <a href="#routines"
-                class="color-text-subtle">Routines</a>
+              <a href="#methods"
+                class="color-text-subtle">Methods</a>
             </li>
           </ol>
         </nav>

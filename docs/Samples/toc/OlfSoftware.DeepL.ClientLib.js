@@ -7,6 +7,51 @@ window.DocInsight.toc["OlfSoftware.DeepL.ClientLib"] =   [
         title: "OlfSoftware.DeepL.ClientLib",
           href: "OlfSoftware.DeepL.ClientLib.html",
       },      {
+        id: "OlfSoftware.DeepL.ClientLib-Classes",
+        title: "Classes",
+          children:   [
+      {
+        id: "OlfSoftware.DeepL.ClientLib.TDeepLAPI",
+        title: "TDeepLAPI",
+          href: "OlfSoftware.DeepL.ClientLib.TDeepLAPI.html",
+          children:   [
+      {
+        id: "OlfSoftware.DeepL.ClientLib.TDeepLAPI-Constants",
+        title: "Constants",
+          children:   [
+      {
+        id: "OlfSoftware.DeepL.ClientLib.TDeepLAPI.ServerURLFree",
+        title: "ServerURLFree",
+          href: "OlfSoftware.DeepL.ClientLib.TDeepLAPI.ServerURLFree.html",
+      },      {
+        id: "OlfSoftware.DeepL.ClientLib.TDeepLAPI.ServerURLPro",
+        title: "ServerURLPro",
+          href: "OlfSoftware.DeepL.ClientLib.TDeepLAPI.ServerURLPro.html",
+      }  ]
+,
+      },      {
+        id: "OlfSoftware.DeepL.ClientLib.TDeepLAPI-Methods",
+        title: "Methods",
+          children:   [
+      {
+        id: "OlfSoftware.DeepL.ClientLib.TDeepLAPI.Init",
+        title: "Init",
+          href: "OlfSoftware.DeepL.ClientLib.TDeepLAPI.Init.html",
+      },      {
+        id: "M:OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextASync",
+        title: "TranslateTextASync",
+          href: "OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextASync.html",
+      },      {
+        id: "M:OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextSync",
+        title: "TranslateTextSync",
+          href: "OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextSync.html",
+      }  ]
+,
+      }  ]
+,
+      }  ]
+,
+      },      {
         id: "OlfSoftware.DeepL.ClientLib-Delegates",
         title: "Delegates",
           children:   [

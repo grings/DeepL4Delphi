@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DeepLTranslateTextASync Method</title>
+  <title>TDeepLAPI.TranslateTextSync Method</title>
   <meta name="color-scheme" content="light dark" />
   <meta name="generator" content="DocInsight" />
   <meta name="toc-key" content="OlfSoftware.DeepL.ClientLib" />
   <meta name="search-index" content="toc&#x2f;search-index.js" />
-  <meta name="uid" content="OlfSoftware.DeepL.ClientLib.DeepLTranslateTextASync" />
+  <meta name="uid" content="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextSync" />
   <link rel="stylesheet" href="static/css/learn.css" />
   <script src="static/js/index-learn.js"></script>
   <script src="toc/OlfSoftware.DeepL.ClientLib.js"></script>
@@ -77,6 +77,9 @@
             <li class="breadcrumbs-item">
               <a href="OlfSoftware.DeepL.ClientLib.html" class="cref">OlfSoftware.DeepL.ClientLib</a>
             </li>
+            <li class="breadcrumbs-item">
+              <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.html" class="cref">TDeepLAPI</a>
+            </li>
           </ol>
         </nav>
 
@@ -85,7 +88,7 @@
       </div>
 
       <div class="content">
-        <h1>DeepLTranslateTextASync Method</h1>
+        <h1>TDeepLAPI.TranslateTextSync Method</h1>
 
         <nav id="center-doc-outline" class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm"
           aria-label="On this page">
@@ -97,10 +100,13 @@
               <a href="#overloads">Overloads</a>
             </li>
             <li class="">
-              <a href="#DeepLTranslateTextASync(string,string,string,string,TOnTextTranslatedProc,TOnTextTranslatedErrorProc,string,string,string)">DeepLTranslateTextASync(string, string, string, string, TOnTextTranslatedProc, TOnTextTranslatedErrorProc, string, string, string)</a>
+              <a href="#TranslateTextSync(string,string,string,TJSONObject,boolean,string)">TranslateTextSync(string, string, string, TJSONObject, Boolean, string)</a>
             </li>
             <li class="">
-              <a href="#DeepLTranslateTextASync(string,string,string,string,TOnTextTranslatedEvent,TOnTextTranslatedErrorEvent,string,string,string)">DeepLTranslateTextASync(string, string, string, string, TOnTextTranslatedEvent, TOnTextTranslatedErrorEvent, string, string, string)</a>
+              <a href="#TranslateTextSync(string,string,string,TJSONObject,boolean)">TranslateTextSync(string, string, string, TJSONObject, Boolean)</a>
+            </li>
+            <li class="">
+              <a href="#TranslateTextSync(string,string,string,string,TJSONObject,boolean)">TranslateTextSync(string, string, string, string, TJSONObject, Boolean)</a>
             </li>
           </ol>
         </nav>
@@ -141,12 +147,12 @@
       <tr>
         <td>
           <span class="break-text">
-            <a href="OlfSoftware.DeepL.ClientLib.DeepLTranslateTextASync.html#DeepLTranslateTextASync(string,string,string,string,TOnTextTranslatedProc,TOnTextTranslatedErrorProc,string,string,string)" class="cref">DeepLTranslateTextASync(string, string, string, string, TOnTextTranslatedProc, TOnTextTranslatedErrorProc, string, string, string)</a>
+            <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextSync.html#TranslateTextSync(string,string,string,TJSONObject,boolean,string)" class="cref">TranslateTextSync(string, string, string, TJSONObject, Boolean, string)</a>
           </span>
         </td>
         <td class="has-text-wrap">
           <p>call DeepL API to translate the text from source_lang to target_lang
-(asynchrone - don&#x27;t freeze current thread)
+(synchrone - current thread is freezed during process)
 
 </p>
 
@@ -156,16 +162,21 @@
       <tr>
         <td>
           <span class="break-text">
-            <a href="OlfSoftware.DeepL.ClientLib.DeepLTranslateTextASync.html#DeepLTranslateTextASync(string,string,string,string,TOnTextTranslatedEvent,TOnTextTranslatedErrorEvent,string,string,string)" class="cref">DeepLTranslateTextASync(string, string, string, string, TOnTextTranslatedEvent, TOnTextTranslatedErrorEvent, string, string, string)</a>
+            <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextSync.html#TranslateTextSync(string,string,string,TJSONObject,boolean)" class="cref">TranslateTextSync(string, string, string, TJSONObject, Boolean)</a>
           </span>
         </td>
         <td class="has-text-wrap">
-          <p>call DeepL API to translate the text from source_lang to target_lang
-(asynchrone - don&#x27;t freeze current thread)
-
-</p>
-
-
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="break-text">
+            <a href="OlfSoftware.DeepL.ClientLib.TDeepLAPI.TranslateTextSync.html#TranslateTextSync(string,string,string,string,TJSONObject,boolean)" class="cref">TranslateTextSync(string, string, string, string, TJSONObject, Boolean)</a>
+          </span>
+        </td>
+        <td class="has-text-wrap">
+          
         </td>
       </tr>
     </tbody>
@@ -188,8 +199,8 @@
 <div>
   <div class="heading-wrapper" data-heading-level="h2">
     <a class="anchor-link" href="#"></a>
-    <h2 id="DeepLTranslateTextASync(string,string,string,string,TOnTextTranslatedProc,TOnTextTranslatedErrorProc,string,string,string)" class="memberNameHolder heading-anchor">
-      DeepLTranslateTextASync(string, string, string, string, TOnTextTranslatedProc, TOnTextTranslatedErrorProc, string, string, string)
+    <h2 id="TranslateTextSync(string,string,string,TJSONObject,boolean,string)" class="memberNameHolder heading-anchor">
+      TranslateTextSync(string, string, string, TJSONObject, Boolean, string)
     </h2>
   </div>
   <div class="memberInfo">
@@ -199,7 +210,7 @@
 <div class="summaryHolder">
   <div class="summary clearFix has-text-wrap">
     <p>call DeepL API to translate the text from source_lang to target_lang
-(asynchrone - don&#x27;t freeze current thread)
+(synchrone - current thread is freezed during process)
 
 </p>
 
@@ -218,7 +229,7 @@
 </div>
 
 <pre
-  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">procedure DeepLTranslateTextASync(auth_key: string; source_lang: string; target_lang: string; text: string; onTextTranslatedProc: TOnTextTranslatedProc; onTextTranslatedErrorProc: TOnTextTranslatedErrorProc = 0; split_sentences: string = &#x27;1&#x27;; preserve_formatting: string = &#x27;0&#x27;; formality: string = &#x27;default&#x27;)</code></pre>
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function TranslateTextSync(auth_key: string; target_lang: string; text: string; OptionalSettings: TJSONObject; FreeOptionalSettings: boolean; var DetectedSourceLang: string): string</code></pre>
 
 
 <h4 class="propertyInfoTitle stack">Parameters</h4>
@@ -226,17 +237,6 @@
   <dl class="parameterList">
     <dt>
       auth_key
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      source_lang
     </dt>
     <dd>
       string
@@ -269,10 +269,25 @@
 <div class="propertyInfo stack">
   <dl class="parameterList">
     <dt>
-      onTextTranslatedProc
+      OptionalSettings
     </dt>
     <dd>
-      <a href="OlfSoftware.DeepL.ClientLib.TOnTextTranslatedProc.html" data-linktype="relative-path">TOnTextTranslatedProc</a>
+      TJSONObject
+    </dd>
+  </dl>
+  <p>JSON object contening your optional parameters. They are passed &quot;as it&quot; to DeepL in request body.
+
+</p>
+
+
+</div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      FreeOptionalSettings
+    </dt>
+    <dd>
+      Boolean
     </dd>
   </dl>
   
@@ -280,40 +295,7 @@
 <div class="propertyInfo stack">
   <dl class="parameterList">
     <dt>
-      onTextTranslatedErrorProc
-    </dt>
-    <dd>
-      <a href="OlfSoftware.DeepL.ClientLib.TOnTextTranslatedErrorProc.html" data-linktype="relative-path">TOnTextTranslatedErrorProc</a>
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      split_sentences
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      preserve_formatting
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      formality
+      DetectedSourceLang
     </dt>
     <dd>
       string
@@ -322,6 +304,11 @@
   
 </div>
 
+<h4 class="propertyInfoTitle stack">Returns</h4>
+<div class="propertyInfo">
+  string
+  
+</div>
 
 
 
@@ -346,24 +333,14 @@
 <div>
   <div class="heading-wrapper" data-heading-level="h2">
     <a class="anchor-link" href="#"></a>
-    <h2 id="DeepLTranslateTextASync(string,string,string,string,TOnTextTranslatedEvent,TOnTextTranslatedErrorEvent,string,string,string)" class="memberNameHolder heading-anchor">
-      DeepLTranslateTextASync(string, string, string, string, TOnTextTranslatedEvent, TOnTextTranslatedErrorEvent, string, string, string)
+    <h2 id="TranslateTextSync(string,string,string,TJSONObject,boolean)" class="memberNameHolder heading-anchor">
+      TranslateTextSync(string, string, string, TJSONObject, Boolean)
     </h2>
   </div>
   <div class="memberInfo">
     
 
 
-<div class="summaryHolder">
-  <div class="summary clearFix has-text-wrap">
-    <p>call DeepL API to translate the text from source_lang to target_lang
-(asynchrone - don&#x27;t freeze current thread)
-
-</p>
-
-
-  </div>
-</div>
 
 
 <div class="code-block-header margin-top-sm">
@@ -376,7 +353,110 @@
 </div>
 
 <pre
-  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">procedure DeepLTranslateTextASync(auth_key: string; source_lang: string; target_lang: string; text: string; onTextTranslatedEvent: TOnTextTranslatedEvent; onTextTranslatedErrorEvent: TOnTextTranslatedErrorEvent = 0; split_sentences: string = &#x27;1&#x27;; preserve_formatting: string = &#x27;0&#x27;; formality: string = &#x27;default&#x27;)</code></pre>
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function TranslateTextSync(auth_key: string; target_lang: string; text: string; OptionalSettings: TJSONObject = 0; FreeOptionalSettings: boolean = True): string</code></pre>
+
+
+<h4 class="propertyInfoTitle stack">Parameters</h4>
+<div class="propertyInfo">
+  <dl class="parameterList">
+    <dt>
+      auth_key
+    </dt>
+    <dd>
+      string
+    </dd>
+  </dl>
+  
+</div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      target_lang
+    </dt>
+    <dd>
+      string
+    </dd>
+  </dl>
+  
+</div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      text
+    </dt>
+    <dd>
+      string
+    </dd>
+  </dl>
+  
+</div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      OptionalSettings
+    </dt>
+    <dd>
+      TJSONObject
+    </dd>
+  </dl>
+  
+</div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      FreeOptionalSettings
+    </dt>
+    <dd>
+      Boolean
+    </dd>
+  </dl>
+  
+</div>
+
+<h4 class="propertyInfoTitle stack">Returns</h4>
+<div class="propertyInfo">
+  string
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+<div>
+  <div class="heading-wrapper" data-heading-level="h2">
+    <a class="anchor-link" href="#"></a>
+    <h2 id="TranslateTextSync(string,string,string,string,TJSONObject,boolean)" class="memberNameHolder heading-anchor">
+      TranslateTextSync(string, string, string, string, TJSONObject, Boolean)
+    </h2>
+  </div>
+  <div class="memberInfo">
+    
+
+
+
+
+<div class="code-block-header margin-top-sm">
+  <span class="code-block-header-language">Delphi</span>
+  <button type="button" class="button button-sm action inner-focus display-none-print">
+    <span class="icon copy has-text-subtle margin-right-xxs" aria-hidden="true">
+    </span>
+    <span>Copy</span>
+  </button>
+</div>
+
+<pre
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function TranslateTextSync(auth_key: string; source_lang: string; target_lang: string; text: string; OptionalSettings: TJSONObject = 0; FreeOptionalSettings: boolean = True): string</code></pre>
 
 
 <h4 class="propertyInfoTitle stack">Parameters</h4>
@@ -427,10 +507,10 @@
 <div class="propertyInfo stack">
   <dl class="parameterList">
     <dt>
-      onTextTranslatedEvent
+      OptionalSettings
     </dt>
     <dd>
-      <a href="OlfSoftware.DeepL.ClientLib.TOnTextTranslatedEvent.html" data-linktype="relative-path">TOnTextTranslatedEvent</a>
+      TJSONObject
     </dd>
   </dl>
   
@@ -438,45 +518,18 @@
 <div class="propertyInfo stack">
   <dl class="parameterList">
     <dt>
-      onTextTranslatedErrorEvent
+      FreeOptionalSettings
     </dt>
     <dd>
-      <a href="OlfSoftware.DeepL.ClientLib.TOnTextTranslatedErrorEvent.html" data-linktype="relative-path">TOnTextTranslatedErrorEvent</a>
+      Boolean
     </dd>
   </dl>
   
 </div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      split_sentences
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      preserve_formatting
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      formality
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
+
+<h4 class="propertyInfoTitle stack">Returns</h4>
+<div class="propertyInfo">
+  string
   
 </div>
 
@@ -485,13 +538,6 @@
 
 
 
-
-
-
-<h2 id="remarks">Remarks</h2>
-<p>look at https:&#x2f;&#x2f;developers.deepl.com&#x2f;api-reference&#x2f;translate
-
-</p>
 
 
 
@@ -524,13 +570,18 @@
             </li>
             <li
               class="border-left-md padding-left-xxs  border-color-transparent">
-              <a href="#DeepLTranslateTextASync(string,string,string,string,TOnTextTranslatedProc,TOnTextTranslatedErrorProc,string,string,string)"
-                class="color-text-subtle">DeepLTranslateTextASync(string, string, string, string, TOnTextTranslatedProc, TOnTextTranslatedErrorProc, string, string, string)</a>
+              <a href="#TranslateTextSync(string,string,string,TJSONObject,boolean,string)"
+                class="color-text-subtle">TranslateTextSync(string, string, string, TJSONObject, Boolean, string)</a>
             </li>
             <li
               class="border-left-md padding-left-xxs  border-color-transparent">
-              <a href="#DeepLTranslateTextASync(string,string,string,string,TOnTextTranslatedEvent,TOnTextTranslatedErrorEvent,string,string,string)"
-                class="color-text-subtle">DeepLTranslateTextASync(string, string, string, string, TOnTextTranslatedEvent, TOnTextTranslatedErrorEvent, string, string, string)</a>
+              <a href="#TranslateTextSync(string,string,string,TJSONObject,boolean)"
+                class="color-text-subtle">TranslateTextSync(string, string, string, TJSONObject, Boolean)</a>
+            </li>
+            <li
+              class="border-left-md padding-left-xxs  border-color-transparent">
+              <a href="#TranslateTextSync(string,string,string,string,TJSONObject,boolean)"
+                class="color-text-subtle">TranslateTextSync(string, string, string, string, TJSONObject, Boolean)</a>
             </li>
           </ol>
         </nav>
