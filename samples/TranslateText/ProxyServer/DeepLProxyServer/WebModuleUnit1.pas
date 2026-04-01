@@ -39,8 +39,8 @@
   https://github.com/DeveloppeurPascal/DeepL4Delphi
 
   ***************************************************************************
-  File last update : 2026-02-24T20:09:36.000+01:00
-  Signature : fc23a5f4bde754ac90e801a423725c1b7c37ae44
+  File last update : 2026-04-01T17:08:08.000+02:00
+  Signature : 9cc53f3b3899dec240f8927ea61f2f25faab73c8
   ***************************************************************************
 *)
 
@@ -88,7 +88,7 @@ procedure TWebModule1.WebModule1APITranslateAction(Sender: TObject;
   Request: TWebRequest; Response: TWebResponse; var Handled: Boolean);
 var
   SourceLang, TargetLang, Texte, SplitSentences, PreserveFormatting,
-  Formality: string;
+    Formality: string;
   LTK: string;
   TexteTraduit: string;
   jso: tjsonobject;
@@ -99,7 +99,8 @@ begin
   // for var i := 0 to request.ContentFields.Count-1 do
   // writeln(          request.ContentFields[i]);
 
-  if request.ContentType.Equals('application/json') and (not request.Content.isempty) then
+  if request.ContentType.Equals('application/json') and (not
+    request.Content.isempty) then
   begin
     //    writeln(request.content);
     jso := tjsonobject.ParseJSONValue(request.Content) as TJSONObject;
@@ -117,7 +118,8 @@ begin
           Response.StatusCode := 404;
           abort;
         end;
-        if jso.TryGetValue<TJSONArray>('text', jsa) and assigned(jsa) and (jsa.count = 1) then
+        if jso.TryGetValue<TJSONArray>('text', jsa) and assigned(jsa) and
+          (jsa.count = 1) then
           Texte := jsa.Items[0].AsType<string>
         else
         begin
@@ -126,7 +128,8 @@ begin
         end;
         if not jso.TryGetValue<string>('split_sentences', SplitSentences) then
           SplitSentences := '1';
-        if not jso.TryGetValue<string>('preserve_formatting', PreserveFormatting) then
+        if not jso.TryGetValue<string>('preserve_formatting', PreserveFormatting)
+          then
           PreserveFormatting := '0';
         if not jso.TryGetValue<string>('formality', Formality) then
           Formality := 'default';
@@ -172,7 +175,8 @@ begin
   Response.CustomHeaders.Add('Access-Control-Allow-Origin=*');
 
   // regarder si on a déjà fait cette demande
-  LTK := SourceLang + TargetLang + Texte + SplitSentences + PreserveFormatting + Formality;
+  LTK := SourceLang + TargetLang + Texte + SplitSentences + PreserveFormatting +
+    Formality;
   // si oui, envoyer la réponse de départ
   if ListeTraductions.ContainsKey(LTK) then
   begin
@@ -185,8 +189,11 @@ begin
   begin
     // si non, faire la demande à DeepL et stocker la réponse
     try
-      TexteTraduit := DeepLTranslateTextSync(apikey, SourceLang, TargetLang,
-        Texte, SplitSentences, PreserveFormatting, Formality);
+      TexteTraduit := TDeepLAPI.TranslateTextSync(apikey, SourceLang,
+        TargetLang,
+        Texte, TJSONObject.Create.AddPair('split_sentences',
+          SplitSentences).addpair('preserve_formatting', PreserveFormatting =
+          '1').addpair('formality', Formality));
       // retourner la réponse trouvée dans le cache ou provanent de DeepL
       Response.StatusCode := 200;
       Response.ContentType := 'application/json';
@@ -195,8 +202,8 @@ begin
       try
         jso.AddPair('translations',
           tjsonarray.create.Add(tjsonobject.create.AddPair
-          ('detected_source_language', TargetLang).AddPair('text',
-          TexteTraduit)));
+            ('detected_source_language', TargetLang).AddPair('text',
+              TexteTraduit)));
         MonitorEnter(ListeTraductions);
         try
           ListeTraductions.Add(LTK, jso);
@@ -219,7 +226,7 @@ procedure TWebModule1.WebModule1DefaultHandlerAction(Sender: TObject;
   Request: TWebRequest; Response: TWebResponse; var Handled: Boolean);
 begin
   Response.Content := '<html>' + '<head><title>Proxy DeepL</title></head>' +
-  '<body>Proxy DeepL is waiting for your messages.</body>' + '</html>';
+    '<body>Proxy DeepL is waiting for your messages.</body>' + '</html>';
 end;
 
 initialization
