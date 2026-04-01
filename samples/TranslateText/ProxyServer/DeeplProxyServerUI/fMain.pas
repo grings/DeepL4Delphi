@@ -39,8 +39,8 @@
   https://github.com/DeveloppeurPascal/DeepL4Delphi
 
   ***************************************************************************
-  File last update : 2026-02-23T19:54:23.334+01:00
-  Signature : ada03e0a71b99a1d83a56bdddb11e03a3a9ca91d
+  File last update : 2026-04-01T17:12:22.000+02:00
+  Signature : c3955434d57f93b15e8bab1f9dd9acad649e5114
   ***************************************************************************
 *)
 
@@ -124,15 +124,15 @@ begin
   end;
 
   if edtURLAPI.Text.IsEmpty then
-    DeepLSetAPIURL(CDeepLAPIURL_Free)
+    TDeepLAPI.Init(TDeepLAPI.ServerURLFree)
   else
-    DeepLSetAPIURL(edtURLAPI.Text);
+    TDeepLAPI.Init(edtURLAPI.Text);
 
   btnTestTranslateFREN.Visible := false;
   AniIndicator1.Visible := true;
   AniIndicator1.Enabled := true;
   try
-    DeepLTranslateTextASync(edtAPIKey.Text, 'FR', 'EN', edtTextFR.Text,
+    TDeepLAPI.TranslateTextASync(edtAPIKey.Text, 'FR', 'EN', edtTextFR.Text,
       procedure(OriginalText, TranslatedText, SourceLang, TargetLang: string)
       begin
         edtTextEN.Text := TranslatedText;
