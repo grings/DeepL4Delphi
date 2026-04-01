@@ -39,8 +39,8 @@
   https://github.com/DeveloppeurPascal/DeepL4Delphi
 
   ***************************************************************************
-  File last update : 2026-02-23T19:54:23.308+01:00
-  Signature : cfb6c9dc592c48d198609809da88684d3f81d3f0
+  File last update : 2026-04-01T17:09:36.000+02:00
+  Signature : b627d9defef6c0ea8550a92198de5f2a5102918b
   ***************************************************************************
 *)
 
@@ -280,7 +280,8 @@ begin
     begin
       APIKeyFileName := tpath.combine(tpath.GetDocumentsPath, 'cle-deepl.dat');
       if not tfile.Exists(APIKeyFileName) then
-        APIKeyFileName := tpath.combine(tpath.GetDocumentsPath, 'cle-deepl.txt');
+        APIKeyFileName := tpath.combine(tpath.GetDocumentsPath,
+          'cle-deepl.txt');
       if tfile.Exists(APIKeyFileName) then
         apikey := tfile.ReadAllText(APIKeyFileName);
     end;
@@ -288,9 +289,9 @@ begin
       raise exception.Create('DeepL API key needed.');
 
     if findcmdlineswitch('apipro') then
-      DeepLSetAPIURL(CDeepLAPIURL_Pro)
+      TDeepLAPI.Init(TDeepLAPI.ServerURLPro)
     else
-      DeepLSetAPIURL(CDeepLAPIURL_Free);
+      TDeepLAPI.Init(TDeepLAPI.ServerURLFree);
 {$IFDEF LINUX}
     // Want to understand how to create a Linux daemon ?
     // Look at Paolo Rossi blog :
@@ -311,7 +312,7 @@ begin
 
           if setsid() < 0 then
             raise exception.Create
-            ('Impossible to create an independent session');
+              ('Impossible to create an independent session');
 
           Signal(SIGCHLD, TSignalHandler(SIG_IGN));
           Signal(SIGHUP, HandleSignals);
